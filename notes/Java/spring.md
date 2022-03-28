@@ -1,23 +1,25 @@
->> Spring is a frame work, which is  free, open source and lightweight, which provides patterns and structures to manage the objects life cycle and dependencies for the components and services in the code through dependency injection and application context.
+# Spring Framework
+
+- Spring is a frame work, which is  free, open source and lightweight, which provides patterns and structures to manage the objects life cycle and dependencies for the components and services in the code through dependency injection and application context.
 
 >> Spring can do a lot of things, so we have to exactly say what we want to do using it, it does need a lot of configurations to setup.
-	Spring boot is different, it enables us achieve auto configuration, it is convention over configuration, means we can focus on the code part and spring boot takes care of the configuration part.
+ Spring boot is different, it enables us achieve auto configuration, it is convention over configuration, means we can focus on the code part and spring boot takes care of the configuration part.
 maven is a build and dependency providing tool
 
->> What is a framework?
-	Framework is a combination or set of classes and interfaces which provide ready made architecture to simplify the developing process.
+- What is a framework?
+ Framework is a combination or set of classes and interfaces which provide ready made architecture to simplify the developing process.
 Java has inbuilt framework called collection framework, which helps us by providing a way to handle the data structures by providing classes and interfaces. Lets say if the collection framework is not existed, then it will be a tedious job to implement those data structures in our code every single time when we want to use them. Because of frameworks we can concentrate on the business logic that we want to implement rather than implementing other things.
 
->> Why to use spring?
-	Spring is a free and open source framework which is lightweight and is an alternative to the heavier enterprise java technologies such as EJB. Spring address the complexity of enterprise application development, by providing easy data access, Srping MVC, transaction management and security. Spring framework simplifies the Java development. It is lightweight because it is developed using the POJO. POJO is Plain Old Java Object, it means an object of a class without any bounded restrictions with any framework.
+- Why to use spring?
+ Spring is a free and open source framework which is lightweight and is an alternative to the heavier enterprise java technologies such as EJB. Spring address the complexity of enterprise application development, by providing easy data access, Srping MVC, transaction management and security. Spring framework simplifies the Java development. It is lightweight because it is developed using the POJO. POJO is Plain Old Java Object, it means an object of a class without any bounded restrictions with any framework.
 
->> What is Dependency Injection?
-	Dependency  is a term used to say that how a software depends or relise on other software. Dependency or coupling are the terms used. Coupling is of two types Loose coupling and tight coupling. Spring framework provides us a way to achieve loose coupling through dependency injection.
+- What is Dependency Injection?
+ Dependency  is a term used to say that how a software depends or relise on other software. Dependency or coupling are the terms used. Coupling is of two types Loose coupling and tight coupling. Spring framework provides us a way to achieve loose coupling through dependency injection.
 The way spring acheives dependency injection is, Spring is a container of beans. It is similar to servlet container, where a servlet container creates the objects for interfaces or classes that are declared in the servlet. The servlet  container takes care of the object creation.
 Similarly spring is also a container but of beans where we can have any no of objects in the container and spring will take care of instantiations, lifecycles and destructions of the objects.
 
->> What is Dependency injection?
-	First of all, what is dependency? Consider two classes Class A and Class B, if Class A wants to use the functionalities of Class B to run, then the Class A is said to Dependent on Class B.
+- What is Dependency injection?
+ First of all, what is dependency? Consider two classes Class A and Class B, if Class A wants to use the functionalities of Class B to run, then the Class A is said to Dependent on Class B.
 In java, if we want to use the methods of other class, we have to create the object of that class and then we can use the methods.
 Dependency injection means transferring the task of creating the objects to some one else and directly using the dependencies.
 Why do i need Dependency injection?
@@ -26,22 +28,25 @@ Dependency injection is a way of acheiving IoC, where IoC is a concept which sta
 Spring frame work provides dependecy injection.
 
 Benefits of Dependency Injection
+
 1. It helps reduce the boiler plate code, as initializing the dependencies is done by the injector component
 2. Extending the application becomes easier.
 3. Helps enabling loose coupling.
 
 Different types of dependency injections
+
 1. Constructor injection: Class constructor is used to inject the dependencies
 2. Setter injection: Setter methods are used to pass the dependencies
 3. Interface injection: We have to provide a inteface with injector method, and have to provide the setter methods to provide the dependencies to any client passes to it.
 
 The responsibility of the dependency injection is to
+
 1. Create the objects
 2. Know which class requires those objects
 3. And provide all those objects
 
 Which dependecy is better?
-Constructor depedency is used for mandatory dependencies and Setter based dependency is used for optional dependencies. 
+Constructor depedency is used for mandatory dependencies and Setter based dependency is used for optional dependencies.
 If our application cannot operate without any dependencies, then those dependencies need to be injected using the constructor dependency, constructor DI fails to achieve Circular Dependency, Circular dependency is a situation where A is dependent on B and B is dependent on A. Setter injection helps us to acheive Circular dependency.
 
 IoC(Inversion of Control) container
@@ -52,22 +57,21 @@ Inversion of Control can be achieved through various mechanisms such as, Depende
 
 IoC and DI are almost same the difference is that IoC creates the objects and manages them, while Dependency Injection injects the dependencies wherever it has to.
 
->> Application Context
-	Spring is based on the principle of IoC container, it is responsible for managing the objects of application, it uses dependency injection to inject the dependencies.
+- Application Context
+ Spring is based on the principle of IoC container, it is responsible for managing the objects of application, it uses dependency injection to inject the dependencies.
 Application context and Bean factory represents the IoC container. Bean Factory is the root interface of Spring framework, which provides basic functionalities for managing beans.Bean factory interface doesn't support annotation configuration.
 Application context is an interface which extends the bean factory interface, so it provides all the functionalites of bean factory and more. Bean factory is used for lightweight applications.
 ApplicationContext provides more enterprise specific features, the important features are resolving messages, supporting internationalization, publishing events and application layer specific context.
 
 Types of application context
-	1.AnnotationConfigApplicationContext: is a class used with java based configuration.
-	2.AnnotationConfigWebApplicationContext : is a class used with java based configuration for web application.
-	3.XmlWebApplicationContext: is a class and can be used with xml based configuration.
-	4.FileSystemApplicationContext: is a class, used for xml based configuration, this class takes file path as a parameter.
-	5.ClassPathXmlApplicationContext: is same as previous one but xml file path is provided as parameter.
+ 1.AnnotationConfigApplicationContext: is a class used with java based configuration.
+ 2.AnnotationConfigWebApplicationContext : is a class used with java based configuration for web application.
+ 3.XmlWebApplicationContext: is a class and can be used with xml based configuration.
+ 4.FileSystemApplicationContext: is a class, used for xml based configuration, this class takes file path as a parameter.
+ 5.ClassPathXmlApplicationContext: is same as previous one but xml file path is provided as parameter.
 
->> What is a bean?
-	A bean is nothing but an object which is instantiated, assembled and managed by the spring IoC container which is either Bean factory or application context. Should we have to configure all the objects as spring beans? The answer is no. According to spring documentation we have to configure beans for service layer objects, data access objects and presentation objects.
-
+- What is a bean?
+ A bean is nothing but an object which is instantiated, assembled and managed by the spring IoC container which is either Bean factory or application context. Should we have to configure all the objects as spring beans? The answer is no. According to spring documentation we have to configure beans for service layer objects, data access objects and presentation objects.
 
 MVC
 MVC is short for Model View Controller, Basically our code has different sections, one is for  how the interface should look like, other is to hold the data, and other is how the application should work or the functionality of the application. MVC is a way to organize the code in its own way.
@@ -80,12 +84,11 @@ Then what is the difference between MVC and Spring MVC?
 MVC is a design pattern and Spring MVC is an implementation of that design pattern. Just like TCP/IP is an implementation of OSI  reference model.
 
 Spring MVC
-Flow of spring MVC 
+Flow of spring MVC
 In the web application there are lots of controllers or servlets, it is difficult to manage them all, so Spring MVC provides a front controller called DispatcherServlet which takes care of which servlet to be called. But before that when there is a request from client request goes to web.xml and request will go to dispatcher servlet, and how will it done, we have to configure request to be go through the dispatcher servlet. And how dispatcher servlet knows which controller or servlet to call, the calling will be done using annotations which is an @Controller annotation, which will be having some mapping.
 
 ModelAndView
 Model and view is  a class that holds both model and view, this class makes possible for a controller to return the model and view return type as a single return type.
-
 
 Spring Annotations
 
@@ -104,10 +107,10 @@ We can use this annotation to mark the dependency which spring is going to resol
 or
 Autowired annotation is used to inject the dependencies implicitly or automatically, it uses internal setter or constructor injection. this does not work on primitive or string values and works only on reference types.
 class Car{
-	Engine engine;
-	@Autowired
-	Car(Engine engine){
-		this.engine=engine;
+ Engine engine;
+ @Autowired
+ Car(Engine engine){
+  this.engine=engine;
 }
 }
 
@@ -118,52 +121,64 @@ Bean annotation is used at method level and that indicates that this method retu
 
 @Bean
 Engine engine(){
-	return new Engine();
+ return new Engine();
 }
 
 @Qualifier
-Qualifier is used in a situation when we create more than one bean with same type and want to wire only one them to the property, the Qualifier with autowired can be used to remove the confusion. 
+Qualifier is used in a situation when we create more than one bean with same type and want to wire only one them to the property, the Qualifier with autowired can be used to remove the confusion.
 This annotations is used in confused situations. For example consider there is an interface and two class implements that interface and we want to inject a bean, then spring will be confused with multiple matching definitions. We can explicitly provide bean's name using this annotation.
 
 @Autowired
 @Qualifier("bike")
 void setVehicle(Vehicle vehicle)[
-	this.vehicle=vehicle;
+ this.vehicle=vehicle;
 }
 
 @Required
 If we want to inject the dependencies through XML configuration then, this annotation can be used with the setter methods.
+
+```Java
 @Required
 void setVehicle(Vehicle vehicle){
-	this.vehicle=vehicle;
+ this.vehicle=vehicle;
 }
+```
+
+``` XML
 <bean id="vehicle" class="fully qualified name">
 <property>name="bike" value="Ducati"</property>
 </bean>
+```
 
 @Value
 We can use this annotation to inject the property values into the beans, and it is compatible with all the injecting techniques.
+
+```Java
 @Autowired
 @Value("int value")
 void setSomething(int value){
-	this.value=value;
+ this.value=value;
 }
+```
 
 @Component
 Component annotation allows spring to automatically detect our custom beans, without writing any explicit code. Spring will scan our application for the classes annotated with component annotation and injects the required dependencies.
 This annotation is used, when we want an object for a class.
+
+```Java
 @Component
 class Frame {
 }
+```
 
 @ModelAttribute
 This annotation is used to access the attributes of the model or to instantiate a model object if it is not present.
-@RequestHeader 
+@RequestHeader
 It is used to bind the request header of a http reqeust with the method argument
 
 Difference between @Component and @Autowired annotations is that @Component is used to let the spring to know that I may need an object for this class  and @Autowired does the job of creating the objects
 
-Aspect Oriented Programming
+## Aspect Oriented Programming
 
 Aspect oriented programming is about breaking the program logic into distinct parts called concerns, the concerns that span across multiple parts of the program is called cross-cutting concers, these cross-cutting concers are conceptually different from the business logic. Different types of aspects are logging, security, transaction, cashing etc.
 
@@ -204,7 +219,6 @@ This annotation is a combination of both @Controller and @ResponseBody annotatio
 AOP proxy
 Proxy is nothing but an object that wraps another object maintaining its interface and optionally providing aditional features.
 
-
 Spring Boot
 Spring boot is similar to spring framework, it is a module of spring framework. It makes spring configuration easier, where the boot provides auto configuration features.
 @SpringBootApplication annotated with the main class of the application tells that this is a spring boot application. It encapsulate @Configuration, @EnableAutoConfiguration and @ComponentScan with their default values.
@@ -233,7 +247,7 @@ We can create a class with custom conditions and can tell spring by passing the 
 @ConditionalOnExpression
 Spring can use the marked definitions when SpEL is evaluated to be true.
 
-@ModelAttribute 
+@ModelAttribute
 This annotation is invoked before the controller methods that are annotated with @RequestMapping annotation, the idea behind this sequence is that the model object needs to be created before any processing is started in controller
 
 @RequestBody
@@ -280,7 +294,7 @@ This annotation indicates that the class contains @Bean definition methods and n
 What is spring boot?
 Spring boot is a separate module of spring framework which provides pre configured set of frameworks, which reduces the boiler plate code for configuration, so that we can have the application up and running with small amount of code, and spring boot is a stand alone and production ready application because it has an embeded tomcat server.
 
-					-->> "go through aop proxies, what is the need of lazy and eager instantiation, scope of beans"
+> Go through aop proxies, what is the need of lazy and eager instantiation, scope of beans.
 
 Spring security
 When ever there is a request the request passes through different types of filters, filters are the one which provides security like authentication and authorization,  the different types of filters are basicauthenticationfilter, usernamepasswordfilter. if the appropriate filter is loaded then an authentication object is created and it is passed to the authentication manager as an input, the authentication has an interface called authentication provider with an authentication method, which has various implementations based on the use case, like DaoAuthenticationProvider, ldapAuthenticationProvider etc.

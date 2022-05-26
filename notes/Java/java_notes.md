@@ -18,12 +18,14 @@
 
 Main() : Main method in java is the entry point for the JVM into the program. JVM launches the program by invoking the main method.
 
-String [] args : When a program is executed, the array of sequence of characters are passed to the main function by JVM.
+String [] args : When a program is executed, if need to pass data to the program through command line then the array of sequence of characters are passed to the main function by JVM. Which is stored in the String[] args which is an array of strings named args.
+
+- Object oriented programming is a programming paradigm based on the concept of "objects", where functions and data are bind together as a single entity called objects.
 
 **Inheritance** : It is a mechanism in which one class is allowed to inherit the features of another class. Main reason: reusability.
-Extends keyword is used to inherit a class. When ever a class which extends another class, and if we create an object for the subclass, then the constructor of parent class will be called.
+Extends keyword is used to inherit a class. Whenever a class which extends another class, and if we create an object for the subclass, then the constructor of parent class will be called.
 
-**Encapsulation*** : It is designed as wrapping the data under single unit. It is a mechanism that binds the code and data together.
+**Encapsulation** : It is designed as wrapping the data under single unit. It is a mechanism that binds the code and data together. It also restricts the direct access of the objects components.
 Main reason: data hiding
 
 **Polymorphism** : Many forms. It is an ability to display a msg in different ways
@@ -42,17 +44,15 @@ Type casting : Assigning values of one type to other type.
  => Upcasting : Type casting the child object to a parent object. The way of treating the object of child class to be an object of parent class.
 Summarily downcasting
 
-- Object oriented programming is a programming paradigm based on the concept of "objects", which can contain data in the form of procedures. A feature of objects of that an object's own procedures can access and often modify the data fields of itself.
-
 ## String, StringBuilder, StringBuffer
 
 - String is nothing but sequence of characters, which is immutable, and are stored in string constant pool of heap memory. If we create a string and if we create another string variable with same value, then JVM checks the string constant pool and if the values are same then it points to variable to the previously created string object. That is why we can use equals() and '==' on a string literal. And String class overrides the equals() method of object class.
 
-- StringBuilder and StringBuffer are immutable Strings, when ever we want to acheive immutability in strings we have to use either of these two. These classes doesnot override the equals() of object class, it is as same as '==' when we use these classes. To compare two strings when we stringBuilder or Buffer is to convert them using toString() and then we have to use equals().
+- StringBuilder and StringBuffer are mutable Strings, when ever we want to acheive mutability in strings we have to use either of these two. These classes does not override the equals() of object class, it is as same as '==' when we use these classes. To compare two strings of stringBuilder or Buffer we havw to convert them to string using toString() and then we have to use equals().
 
-- When to use Builder and Buffer? If Buffer is used in multi-thread environments because it is thread-safe. We can also use Builder in multi-thread environment but it will provide errorness output. if the application I am building uses single thread environment, then definitely use StringBuilder.
+- When to use Builder and Buffer? StringBuffer is used in multi-thread environments because it is thread-safe. We can also use Builder in multi-thread environment but it will provide errorness output.
 
-- '==' Is an operator and .equals() is a method, whereas == checks if both objects point to same memory location or not and .equals() compares values in the object.
+- '==' Is an operator and .equals() is a method, whereas == checks if both objects point to same memory location or not and .equals() compares values in the string object.
 
 ## Exception Handling
 

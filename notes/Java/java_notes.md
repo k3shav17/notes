@@ -94,10 +94,12 @@ System is a class where out is an object of printstream class which is static an
 ## Overriding with exception handling
 
  1.While overriding a method we can only throw unchecked expection in the method signature, if the parent class method does not have any throws in the method signature, unchecked exceptions are also known as runtime exception.
-Examples of runtime exception are : Arithmetic, IndexOutOfBounds, ClassCastException, IllegalArgumentException(NumberFormatException), NullPointerException.
+
+- Examples of runtime exception are : Arithmetic, IndexOutOfBounds, ClassCastException, IllegalArgumentException(NumberFormatException), NullPointerException.
 
  2.But if the parent method has throws in the method signature, we can use checked expection in overriden method in subclass. Checked exceptions are also known as compile time exceptions.
-Examples of compile time are : FileNotFound, most of the IOexceptions are compile time exceptions.
+
+- Examples of compile time are : FileNotFound, most of the IOexceptions are compile time exceptions.
 
 ### OVERRIDE
 
@@ -110,12 +112,12 @@ The order of execution is Static block > static method > static variables.
 
 **Singleton class**: Singleton class is a class which can have only one object at a time. If we try to instantiate a new object it will also point to the first instance created. The main purpose of the singleton class is to limit the object creation.
 
-- The difference between normal class and singleton class is in object creation.where a normal object created using constructor and object in singleton is created using getInstance() method.
+- The difference between normal class and singleton class is in object creation. Where a normal object created using constructor and object in singleton is created using getInstance() method.
 
-**Thread-safety**
+**Thread-safety**: Thread-saftey is a term used to inform that if a method is safe to use with in the multi-thread environment without any side effects.
 
- Thread-saftey is a term used to inform that if a method is thread safe then that method can be used in multithreading environment and can produce the output without any side effects.
-Thread safe means a method or process can work properly in a multithreaded environment without any side effects. And a method is said to be thread safe, when the scope of reference variables are limited within a method, because every thread has its own stack.
+- Thread safe means a method or process can work properly in a multithreaded environment without any side effects.
+- When the scope of a reference variable is limited within a method then that method is said to be thread safe, because every thread has its own stack.
 When multiple threads are accessing an object or working on the same data at the same time, then we will get inconsistent results and it is not thread safe.
 
 **Multi-Threading** : Multi threading is a process of executing multiple threads at a time to maximize the cpu utilization. Multiple applications execute two or more threads concurrently which is also known as concurrency, threads run parallel to each other and they does not allocate separate memory. Also, context switching takes less time in multithreading.
@@ -126,9 +128,7 @@ When thread is working on an object and preventing the other thread from accessi
 
 :exclamation: Local variables are never shared between threads, they are stored in each thread's own stack.
 
-**DeadLock**
-
-- It is a situation where two or more threads are blocked forever waiting for the object lock, which is acquired by the other thread and the second thread is waiting for the object lock acquired by the first thread, Each of them are waiting for other to release the lock.
+**DeadLock** : It is a situation where two or more threads are blocked forever waiting for the object lock, which is acquired by the other thread and the second thread is waiting for the object lock acquired by the first thread, Each of them are waiting for other to release the lock.
 
 **Synchronised**
 This keyword is used to make the class or method thread-safe, which means only one method can have lock on synchronised method and use it.Other threads have to wait till lock is released.
@@ -166,38 +166,36 @@ Collection is nothing but group of individual classes and interfaces that are re
 
 - Collection is an interface which extends the iterable interface.
 
-- List interface: It is the subclass of collection interface,which is used to store the data of list type which can store in ordered collection.The classes that implement list interface are ArrayList, vector, stack.
+- List interface: It extends the Collection interface, which is used to store the data of type list in ordered manner. The classes that implement list interface are ArrayList, vector, stack.
 
-- ArrayList: Array list is nothing but a dynamic array whose size is not fixed. It is a bit slower than the normal arrays but are used in different types of programs.
+  - ArrayList: Array list is nothing but a dynamic array whose size is not fixed. It is a bit slower than the normal arrays but are used in different types of programs.
 
-- Vector: Vector is similar to that of array list, the only difference is vector is synchronised and arraylist is not.
+  - Vector: Vector is similar to that of array list, the only difference is vector is synchronised and arraylist is not.
 
-- Linkedlist: Linked list is a implementation of list and deque interfaces. It implements all optional list operations and permits all elements.
+  - Linkedlist: Linked list is a implementation of list and deque interfaces. It implements all optional list operations and permits all elements.
   It is not synchronised and every element is a node, which keeps a reference to the next and previous ones, it maintains insertion order.
 
 ## Difference between list, set and queue interface
 
-- A list is an ordered list of objects, where duplication of objects is allowed and we can perform operations on the objects anywhere in the list like adding, removing, changing.
+- List is an ordered collection of objects, where duplication of objects is allowed and we can perform operations on the objects anywhere in the list like adding, removing, changing.
 
-- A queue is also ordered with a principle of FIFO, where the elements are added at the end and removed from the beginning. We can find how many elements are present in the queue, but we can't find at which index the element is.
+- Queue is also ordered collection with the principle of FIFO, where the elements are added at the end and removed from the beginning. We can find how many elements are present in the queue, but we can't find at which index the element is.
 
-- A set is unordered data structure, where duplication is not allowed. We can add or remove the elements and can know how many are there, but unable to find specific element because they are not in particular order.
+- Set is an unordered linear data structure, where duplication is not allowed. We can add or remove the elements and can know how many are there, but unable to find specific element because it is not index based.
 
-**Map interface**
+**Map Interface**
 
-- Map interface is present in java.util package. It represents a mapping between a key and value and it is not a subtype of collection interface.
-
-- Hash map is a class which implements the map interface and Linkedhash map is a class which extends the Hashmap
+- Map interface is present in java.util package. It represents a mapping between a key and a value and it is not a subtype of collection interface.
 
 - Sorted map is an interface which extends the map interface, Tree map is class which implements sorted map.
 
 - Difference between hashtable and hashmap is that hashtable is synchronised and hashmap is not, but hashmap allows null key and multiple null values, whereas hashtable doesn't allow any null key or value. Hashmap is preferred over hashtable when synchronisation is not needed.
 
 **Collections Synopsis**
-Collections is a utility class which provides predefined static methods, that performs on collections and returns collections.
-The two main interfaces of collections are collection and map
-Collection interface
-List, Set, Queue are the interfaces that extends collection interface.
+
+- Collections is a utility class which provides predefined static methods, that performs on collections and returns collections.
+- The two main interfaces of collections are collection and map
+- List, Set, Queue are the interfaces that extends collection interface.
 
 **List Interface**
 Arraylist provide insertion order , index based and get() and iteration is constant time, not synchronised, dynamic resizing. The capacity of the arraylist is currentcapacity * 3/2 + 1
@@ -291,18 +289,22 @@ Where as functional programming is where we can make a function with out any res
 A stream is a sequence of object that supports various methods which can be pipelined through to produce desired results. It is also defined as the sequence of data or continuous flow of data.It is not a data structure, and cannot store any kind of data, we cannot add or remove elements from the data, it is just operations on data.
 
 There are two types of methods in streams.They are
-Intermediate and terminal methods
-Intermediate methods are : map, filter, sorted etc, (I only know these as of now).
-Terminal methods are: reduce, collect, forEach, findFirst etc,
+
+- Intermediate and terminal methods
+
+  - Intermediate methods are : map, filter, sorted etc, (I only know these as of now).
+
+  - Terminal methods are: reduce, collect, forEach, findFirst etc,
 
 Parallel Streams
 Using Parallel streams we can divide the code into multiple streams and make use of the cores of the cpu, each thread runs on separate cores and result is the combination of the execution. Use parallel streams when one don't care about the order of execution. The result is unaffected and the state of one element doesn't affect the other.
 
-Difference between Arrays.asList() and ArrayList(Arrays.asList())
+> Difference between Arrays.asList() and ArrayList(Arrays.asList())
 Arrays.asList()
-This method acts as a bridge between the array based and collection based APIs, it is used to return the fixed size list backed by specific array. We cannot add or remove the elements in the array, we can only modify them and if there were any changes done to the list then the changes will reflect in the original array.
 
-ArrayList(Arrays.asList())
+> This method acts as a bridge between the array based and collection based APIs, it is used to return the fixed size list backed by specific array. We cannot add or remove the elements in the array, we can only modify them and if there were any changes done to the list then the changes will reflect in the original array.
+
+:exclamation: ArrayList(Arrays.asList())
 This method is similar to the Arrays.asList() but we can add or remove the elements and modify, but the original array remains untouched.
 
 Functional interfaces:
@@ -312,25 +314,29 @@ Lambda Expressions
 It is feature which allows us to treat actions as objects.
 lambda expressions are used to implement a functional interface without implementing a class or an anonymous class, a functional interface is an interface which is having only one abstract method, but can also have any number of default methods.
 
-Functional programming
-A programming style which treats computation as mathematical evaluation and reduces mutations on data, no iteration, no loops. In fuctional programming we just declare what to do, we don't say how to do. Fuctional programming doesn't add anything new to java. it just makes the code more readable and maintainable. It is a declarative approach, where we declare what to do and thats it. There are many different functional interfaces available.
+### Functional programming
+
+- A programming style which treats computation as mathematical evaluation and reduces mutations on data, no iteration, no loops.
+- In fuctional programming we just declare what to do, we don't say how to do.
+- Fuctional programming doesn't add anything new to java. it just makes the code more readable and maintainable.
+- It is a declarative approach, where we declare what to do and thats it. There are many different functional interfaces available.
 
 map() method uses Function interface and return type and parameter of this inteface can be any other datatype which is of wrapper class, filter() method uses predicate interface and return type is boolean, reduce() method is Binary Operator interface, forEach is consumer interface and the return type of this interface is void, sorted uses comparator interface.
 
-Inner class
-A class inside a class.There are different types of inner class.
-1.Member class(non static class)
-2.Static class
-3.Anonymous class
+**Inner class** a class inside a class. Types of inner class.
+
+1. Member class(non static class)
+1. Static class
+1. Anonymous class
 
 Inner classes are defined as the class that is declared or defined inside another class, when the purpose of a class is to work with only one class, then declaring it inside makes the code more readable and maintainable, rather than declaring it outside. A inner class can be private and it can access the private members of the outer class as well.
 
-Wrapper class
-Wrapper class provides to use primitive data types as objects. Wrapper class comes handy when working with collection frameworks where primitive data types cannot be used.
-Putting a primitive value inside an object is known as boxing.
-Getting primitive value from an object is known as unboxing.
+**Wrapper class** provides a way to use primitive data types as objects. Wrapper class comes handy when working with collection frameworks where primitive data types cannot be used.
 
- > Layered Architecture :
+- Putting a primitive value inside an object is known as boxing.
+- Getting primitive value from an object is known as unboxing.
+
+### Layered Architecture
 
 - Data Access layer provides interface between business logic layer and underlying database
 - Business layer is used to validate the user credentials.
@@ -341,7 +347,8 @@ Getting primitive value from an object is known as unboxing.
 
 ## Regular Expressions
 
-```re
+``` re
+
 find -->search for the find returns boolean
 
 start-->start index of the match

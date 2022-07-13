@@ -124,10 +124,6 @@ Spring annotations are used to perform different types of tasks. Component annot
 @ModelAttribute annotation is used to inject or load the data objects in the model before the jsp page loads, and the other scenario is to read the data from an existing model.
 
 @Autowired
-We are informing spring that if framework wants to set some property, and if a bean is available it connects or wire automatically, that is auto wire it.
-
-We can use this annotation to mark the dependency which spring is going to resolve and inject. We can use this with setter methods, constructor methods and fields as well.@Autowired has a default boolean argument called request  whose default value is true. It tunes spring's behaviour when it doesnot find a Bean to wire. When true, an exception is thrown and otherwise nothing is wired. If we use constructor injection all the constructor arguments are mandatory.
-or
 Autowired annotation is used to inject the dependencies implicitly or automatically, it uses internal setter or constructor injection. this does not work on primitive or string values and works only on reference types.
 
 ```Java

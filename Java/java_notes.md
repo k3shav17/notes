@@ -14,7 +14,7 @@
 
 - The default constructor initializes the instance variables declared in the class. When class has only constructors with parameters then the compiler does not create a default constructor.
 
-**Static** : Wherever a method or variable is declared with static keyword then that method or variable belongs to that class itself instead of the instance of the class. Hence these methods can be accessed directly with the help of class without creating an object.Static keyword allows the JVM to access the main method without creating an object.
+**Static** : Whenever a method or variable is declared with static keyword then that method or variable belongs to that class itself instead of the instance of the class. Hence these methods can be accessed directly with the help of class without creating an object.Static keyword allows the JVM to access the main method without creating an object.
 
 Main() : Main method in java is the entry point for the JVM into the program. JVM launches the program by invoking the main method.
 
@@ -38,7 +38,7 @@ Main reason: data hiding
 
 **Interface** : Similar to class, it contains methods and variables. Methods declared in an interface is by default abstract, and static and default methods can have body. If an interface contains only one abstract method, but any number of default or static methods then that interface is called funtional interface.
 
-- Similarly, if there is an interface with no methods, then it is called marker interface. Variables inside an interface needs to declared, because they final static.
+- Similarly, if there is an interface with no methods, then it is called marker interface. Variables inside an interface needs to declared, because they are final and static.
 
 Type casting : Assigning values of one type to other type.
  => Upcasting : Type casting the child object to a parent object. The way of treating the object of child class to be an object of parent class.
